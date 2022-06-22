@@ -32,3 +32,6 @@ else if (ageOption.value('senior')) {
 let priceDisplay = ticketPrice.toFixed(2);
 
 
+buttonSend.addEventListener('click' , function {
+    
+})
