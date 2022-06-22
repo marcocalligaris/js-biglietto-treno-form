@@ -7,18 +7,16 @@
 
 // * Variabili
 
-const passenger = document.getElementById('name');
-const kms = document.getElementById('kms');
-const ageOption = document.querySelector('.age-option');
+
 const buttonSend = document.getElementById('send-data');
 const buttonReset = document.getElementById('reset');
 const ticket = document.querySelector('.ticket');
 
 
 buttonSend.addEventListener('click', function() {
-document.getElementById('name').value;
-document.getElementById('kms').value;
-document.getElementById('age-option').value;
+    const passenger = document.getElementById('name').value;
+const kms = document.getElementById('kms').value;
+const ageOption = document.getElementById('age-choice').value;
 
 let ticketPrice = parseInt(kms * 0.21);
 
@@ -30,12 +28,14 @@ else if (ageOption.value('senior')) {
     ticketPrice *= 0.6;
 }
 
+let priceDisplay = ticketPrice.toFixed(2);
+
+document.getElementById('ticket-price').innerText = 'Prezzo del biglietto € ' + priceDisplay;
+
+document.getElementById('passenger-name').innerText = 'NOME DEL PASSEGGERO' + passenger;
 })
 
-document.getElementById('passenger-name').innerText = 'NOME DEL PASSEGGERO' + document.getElementById('name').value;
 
-document.getElementById('ticket-price').innerText = 'Prezzo del biglietto € ' + ticketPrice;
 
-let priceDisplay = ticketPrice.toFixed(2);
 
 
