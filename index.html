@@ -16,15 +16,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-                    <div>
-                        <input type="text" >
-                        <input type="number">
-                        <select name="age" id="age-choice">
-                            <option value="Minorenne">Minorenne</option>
-                            <option value="Maggiorenne">Maggiorenne</option>
-                            <option value="Over 65">Over 65</option>
-                        </select>
+                    <h1 class="mb-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+                    <form>
+                        <div class="mb-4">
+                            <input id="name" type="text" placeholder="Scrivi qui i tuoi dati">
+                            <input id="kms" type="number" placeholder="Scrivi qui i km">
+                            <select name="age" id="age-choice">
+                                <option class="age-option" value="junior">Minorenne</option>
+                                <option class="age-option" value="adult">Maggiorenne</option>
+                                <option class="age-option" value="senior">Over 65</option>
+                            </select>
+                        </div>
+                        <div class="mb-5">
+                            <button id="send-data">Genera</button>
+                            <button id="reset">Annulla</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="ticket">
+                        <h1 class="mb-4">IL TUO BIGLIETTO</h1>
+    
+                        <p id="passenger-name">NOME DEL PASSEGGERO</p>
+                        <p id="ticket-price">Prezzo del biglietto</p>
                     </div>
                 </div>
             </div>
