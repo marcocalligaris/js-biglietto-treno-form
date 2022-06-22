@@ -15,11 +15,12 @@ const buttonReset = document.getElementById('reset');
 const ticket = document.querySelector('.ticket');
 
 
-// * Calcolo il prezzo standard del viaggio
+buttonSend.addEventListener('click', function() {
+document.getElementById('name').value;
+document.getElementById('kms').value;
+document.getElementById('age-option').value;
 
 let ticketPrice = parseInt(kms * 0.21);
-
-// * Calcolo gli sconti
 
 if (ageOption.value('junior')) {
     ticketPrice *= 0.8;
@@ -29,9 +30,12 @@ else if (ageOption.value('senior')) {
     ticketPrice *= 0.6;
 }
 
+})
+
+document.getElementById('passenger-name').innerText = 'NOME DEL PASSEGGERO' + document.getElementById('name').value;
+
+document.getElementById('ticket-price').innerText = 'Prezzo del biglietto € ' + ticketPrice;
+
 let priceDisplay = ticketPrice.toFixed(2);
 
 
-buttonSend.addEventListener('click' , function {
-    
-})
