@@ -15,24 +15,24 @@ const ticket = document.querySelector('.ticket');
 
 buttonSend.addEventListener('click', function() {
     const passenger = document.getElementById('name').value;
-const kms = document.getElementById('kms').value;
-const ageOption = document.getElementById('age-choice').value;
+    const kms = document.getElementById('kms').value;
+    const ageOption = document.getElementById('age-choice').value;
 
-let ticketPrice = parseInt(kms * 0.21);
+    let ticketPrice = parseInt(kms * 0.21);
 
-if (ageOption.value('junior')) {
-    ticketPrice *= 0.8;
-}
+    if (ageOption == 'junior') {
+        ticketPrice *= 0.8;
+    }
 
-else if (ageOption.value('senior')) {
-    ticketPrice *= 0.6;
-}
+    else if (ageOption == 'senior') {
+        ticketPrice *= 0.6;
+    }
 
-let priceDisplay = ticketPrice.toFixed(2);
+    let priceDisplay = ticketPrice.toFixed(2);
 
-document.getElementById('ticket-price').innerText = 'Prezzo del biglietto € ' + priceDisplay;
+    document.getElementById('ticket-price').innerText = 'Prezzo del biglietto € ' + priceDisplay;
 
-document.getElementById('passenger-name').innerText = 'NOME DEL PASSEGGERO' + passenger;
+    document.getElementById('passenger-name').innerText = 'NOME DEL PASSEGGERO ' + passenger;
 })
 
 
